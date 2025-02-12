@@ -1,0 +1,148 @@
+body{
+    background: linear-gradient(135deg, #FFF3E0, #FFCCBC);
+    min-height: 100vh;
+    margin: 200px;
+    color: #69340d;
+}
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #8B4513;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: auto;
+}
+
+.item1,.item2{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+}
+h2 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #A0522D;
+    text-align: center;
+}
+h3,h4 {
+    font-size: 40px;
+    text-align: center;
+    color: #A0522D;
+    margin-top: -1px;
+}
+
+/* 为普通文本添加样式 */
+p, li {
+    color: #6B4423;
+    font-size: 18px;
+}
+
+/* 链接样式 */
+a {
+    color: #D2691E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color:#69340d;
+}
+
+a:hover {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+.family-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.family-member{
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.family-member ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.family-member li {
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.family-member figure {
+    margin: 0;
+}
+
+.family-member img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;    /* 保持图片比例，填充整个框，不变形 */
+    display: block;
+    border-radius: 10px;
+}
+
+.favorite-item {
+    text-align: center;
+    flex: 1;  /* 让所有元素均分空间 */
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.favorite-item img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;    /* 保持图片比例，填充整个框，不变形 */
+    display: block;
+    border-radius: 10px;
+}
+
+.favorite-container{
+    width: 250px;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.favorite-item figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* 让标题在图片上方 */
+    align-items: center;
+}
+
+hr {
+   background-color: #6B4423; 
+   border-color: #6B4423;
+}
+
+footer p {
+    color: #8B4513;
+    text-align: center;
+    font-style: italic;
+}
+    
