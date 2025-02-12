@@ -1,30 +1,157 @@
-/* 1️⃣ 修正 body 溢出问题 */
-body {
+body{
     background: linear-gradient(135deg, #FFF3E0, #FFCCBC);
     min-height: 100vh;
-    padding-top: 50px; /* 代替 margin 让内容有间隔 */
-    margin: 0; /* 移除 200px 的外边距，防止页面超出 */
+    padding-top: 50px; 
+    margin: 0; 
     color: #69340d;
-    overflow-x: hidden; /* 禁止横向滚动，防止图片超出 */
+    overflow-x: hidden; 
 }
-
-/* 2️⃣ 让所有 img 适应屏幕，不溢出 */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #8B4513;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
-/* 3️⃣ 确保 `.img1` 在手机端不会超出 */
 .img1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    max-width: 500px; /* 让图片在 PC 端最大 500px，手机端自适应 */
+    max-width: 500px;
+    height: auto;
 }
 
-/* 4️⃣ 让 `.family-container` 响应式排列 */
+.item1,.item2{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+}
+h2 {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #A0522D;
+    text-align: center;
+}
+h3,h4 {
+    font-size: 40px;
+    text-align: center;
+    color: #A0522D;
+    margin-top: -1px;
+}
+
+/* 为普通文本添加样式 */
+p, li {
+    color: #6B4423;
+    font-size: 18px;
+}
+
+/* 链接样式 */
+a {
+    color: #D2691E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color:#69340d;
+}
+
+a:hover {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+.family-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+.family-member{
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.family-member ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.family-member li {
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.family-member figure {
+    margin: 0;
+}
+
+.family-member img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;    /* 保持图片比例，填充整个框，不变形 */
+    display: block;
+    border-radius: 10px;
+}
+
+.favorite-item {
+    text-align: center;
+    flex: 1;  /* 让所有元素均分空间 */
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.favorite-item img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;    /* 保持图片比例，填充整个框，不变形 */
+    display: block;
+    border-radius: 10px;
+}
+
+.favorite-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.favorite-item figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* 让标题在图片上方 */
+    align-items: center;
+}
+
+hr {
+   background-color: #6B4423; 
+   border-color: #6B4423;
+}
+
+footer p {
+    color: #8B4513;
+    text-align: center;
+    font-style: italic;
+}
+
+/* 基础响应式设置 */
+* {
+    box-sizing: border-box;
+}
+
+/* 容器响应式设置 */
 .family-container {
     display: flex;
     justify-content: space-evenly;
@@ -36,53 +163,38 @@ img {
     margin: 0 auto;
 }
 
-/* 5️⃣ 让 `.family-member` 在手机上自动换行 */
 .family-member {
-    flex: 1 1 300px;
+    flex: 1 1 300px;  /* 允许伸缩，但最小宽度300px */
     text-align: center;
-    max-width: 350px;
+    max-width: 350px;  /* 限制最大宽度 */
     margin: 10px;
 }
 
-/* 6️⃣ 让 `.family-member img` 在小屏幕不溢出 */
 .family-member img {
     width: 100%;
     max-width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 10px;
 }
 
-/* 7️⃣ 修正 `.favorite-container` 让它在小屏幕适应 */
-.favorite-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* 标题响应式设置 */
+h1 {
+    font-size: clamp(30px, 5vw, 50px);  /* 最小30px，最大50px，中间按视窗宽度5%计算 */
 }
 
-/* 8️⃣ 让 `.favorite-item` 适应小屏幕 */
-.favorite-item {
-    flex: 1 1 250px;
-    text-align: center;
-    max-width: 300px;
+h2, h3, h4 {
+    font-size: clamp(24px, 4vw, 40px);
 }
 
-/* 9️⃣ 让 `.favorite-item img` 在手机上不会超出 */
-.favorite-item img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
+/* 文本响应式设置 */
+p, li {
+    font-size: clamp(16px, 2vw, 18px);
 }
 
-/*  🔟 响应式布局：适配手机和平板 */
+/* 媒体查询 */
 @media screen and (max-width: 768px) {
+    /* 平板尺寸 */
     .family-container {
         gap: 15px;
         padding: 10px;
@@ -91,34 +203,28 @@ img {
     .family-member {
         flex: 1 1 250px;
     }
-    
-    .favorite-item {
-        flex: 1 1 200px;
-    }
 }
 
 @media screen and (max-width: 480px) {
+    /* 手机尺寸 */
     .family-container {
-        flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        padding: 5px;
     }
     
     .family-member {
-        flex: 1 1 100%;
+        flex: 1 1 100%;  /* 在手机上单列显示 */
         margin: 5px 0;
     }
     
     .img1 {
-        width: 90%; /* 确保 `.img1` 在手机端不会超出 */
+        width: 90%;  /* 老王的照片在手机上占90%宽度 */
     }
+}
 
-    .favorite-container {
-        flex-direction: column;
-    }
-
-    .favorite-item {
-        width: 90%;
-    }
+img {
+    max-width: 100%;
+    height: auto;
 }
 
     
