@@ -1,10 +1,8 @@
 body{
     background: linear-gradient(135deg, #FFF3E0, #FFCCBC);
     min-height: 100vh;
-    padding-top: 50px; 
-    margin: 0; 
+    margin: 200px;
     color: #69340d;
-    overflow-x: hidden; 
 }
 h1{
     text-align: center;
@@ -119,13 +117,17 @@ a:hover {
 }
 
 .favorite-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    width: 250px;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
     padding: 20px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .favorite-item figure {
@@ -140,91 +142,39 @@ hr {
    border-color: #6B4423;
 }
 
+.bottom-line {
+    margin-top: 30px;
+ }
+
 footer p {
     color: #8B4513;
     text-align: center;
     font-style: italic;
 }
-
-/* 基础响应式设置 */
-* {
-    box-sizing: border-box;
-}
-
-/* 容器响应式设置 */
-.family-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.family-member {
-    flex: 1 1 300px;  /* 允许伸缩，但最小宽度300px */
-    text-align: center;
-    max-width: 350px;  /* 限制最大宽度 */
-    margin: 10px;
-}
-
-.family-member img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* 标题响应式设置 */
-h1 {
-    font-size: clamp(30px, 5vw, 50px);  /* 最小30px，最大50px，中间按视窗宽度5%计算 */
-}
-
-h2, h3, h4 {
-    font-size: clamp(24px, 4vw, 40px);
-}
-
-/* 文本响应式设置 */
-p, li {
-    font-size: clamp(16px, 2vw, 18px);
-}
-
-/* 媒体查询 */
-@media screen and (max-width: 768px) {
-    /* 平板尺寸 */
-    .family-container {
-        gap: 15px;
-        padding: 10px;
-    }
     
-    .family-member {
-        flex: 1 1 250px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* 手机尺寸 */
-    .family-container {
-        gap: 10px;
-        padding: 5px;
-    }
-    
-    .family-member {
-        flex: 1 1 100%;  /* 在手机上单列显示 */
-        margin: 5px 0;
-    }
-    
-    .img1 {
-        width: 90%;  /* 老王的照片在手机上占90%宽度 */
-    }
-}
-
 img {
     max-width: 100%;
     height: auto;
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    width: 95%;  /* 确保在小屏幕上有一定边距 */
+    height: auto;
+}
+
+/* 添加媒体查询只处理图片大小 */
+@media screen and (max-width: 480px) {
+    .family-container {
+        padding: 0 10px;  /* 添加一些水平内边距 */
+    }
+    
+    .family-member img {
+        max-width: 150px;  /* 在手机上稍微缩小图片 */
+    }
 }
 
     
