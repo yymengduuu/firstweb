@@ -150,3 +150,14 @@ footer p {
     font-style: italic;
 }
        
+@media screen and (max-width: 480px) {
+    .favorite-container {
+        flex-direction: column; /* 在手机端，所有内容改为竖向排列 */
+        align-items: center;
+    }
+
+    .favorite-item {
+        width: 90%; /* 让每个元素撑满屏幕，不会挤压内容 */
+        max-width: 300px;
+    }
+}
