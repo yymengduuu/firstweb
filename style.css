@@ -4,6 +4,7 @@ body{
     margin: 200px;
     color: #69340d;
 }
+
 h1{
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -11,6 +12,7 @@ h1{
     font-size: 50px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 .img1 {
     display: block;
     margin-left: auto;
@@ -25,12 +27,14 @@ h1{
     text-align: center;
     width: 30%;
 }
+
 h2 {
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #A0522D;
     text-align: center;
 }
+
 h3,h4 {
     font-size: 40px;
     text-align: center;
@@ -38,13 +42,11 @@ h3,h4 {
     margin-top: -1px;
 }
 
-/* 为普通文本添加样式 */
 p, li {
     color: #6B4423;
     font-size: 18px;
 }
 
-/* 链接样式 */
 a {
     color: #D2691E;
     text-decoration: none;
@@ -71,7 +73,6 @@ a:hover {
     margin: 0 auto;
     flex-wrap: wrap;
 }
-
 
 .family-member{
     flex: 0 1 auto;
