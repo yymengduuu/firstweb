@@ -19,40 +19,12 @@ h1{
     height: auto;
 }
 
-.item {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-    position: relative;  /* 添加相对定位 */
-    z-index: 1;  /* 确保正常的层级顺序 */
-}
-
-.item1, .item2 {
+.item1,.item2{
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     width: 30%;
 }
-.item a img {
-    position: absolute;
-    max-width: 200px;
-    height: auto;
-    display: none;  /* 默认隐藏图片 */
-    z-index: 2;
-}
-
-.item a:hover img {
-    display: block;  /* 悬停时显示图片 */
-    top: 100%;  /* 将图片显示在链接下方 */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* 确保其他内容不被覆盖 */
-section {
-    position: relative;
-    margin-bottom: 250px;  /* 为弹出的图片预留空间 */
-}
-
 h2 {
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -130,32 +102,30 @@ a:hover {
 }
 
 .favorite-item {
+    flex: 1 1 250px; /* 让元素可伸缩，确保不会挤压 */
     text-align: center;
-    flex: 1;  /* 让所有元素均分空间 */
-    min-width: 200px;
-    max-width: 250px;
+    max-width: 300px;
+    min-height: auto; /* 确保容器不会超出 */
+    overflow: hidden;
 }
 
-.favorite-item img{
-    width: 250px;
-    height: 300px;
-    object-fit: cover;    /* 保持图片比例，填充整个框，不变形 */
+.favorite-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     display: block;
     border-radius: 10px;
 }
 
-.favorite-container{
-    width: 250px;
-    height: 300px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.favorite-container {
+    display: flex;
+    flex-wrap: wrap; /* 让 .favorite-item 在小屏幕上换行 */
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
+    overflow: hidden; /* 确保内容不会溢出 */
 }
 
 .favorite-item figure {
@@ -179,30 +149,4 @@ footer p {
     text-align: center;
     font-style: italic;
 }
-    
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.img1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
-    width: 95%;  /* 确保在小屏幕上有一定边距 */
-    height: auto;
-}
-
-/* 添加媒体查询只处理图片大小 */
-@media screen and (max-width: 480px) {
-    .family-container {
-        padding: 0 10px;  /* 添加一些水平内边距 */
-    }
-    
-    .family-member img {
-        max-width: 150px;  /* 在手机上稍微缩小图片 */
-    }
-}
-
-    
+       
